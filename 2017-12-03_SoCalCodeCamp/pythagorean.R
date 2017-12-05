@@ -1,7 +1,7 @@
 teams <- read.csv("Teams.csv")
 str(teams)
 
-teams2016 <- subset(teams, yearID == 2006)
+teams2016 <- subset(teams, yearID == 2016)
 teams2016 <- teams2016[c("teamID", "W", "L", "R", "RA")]
 teams2016$WinPct <- teams2016$W / (teams2016$W + teams2016$L)
 teams2016$PredictWinPct <- teams2016$R^2 / (teams2016$R^2 + teams2016$RA^2)
